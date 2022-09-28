@@ -1,0 +1,98 @@
+@use '../../variables';
+
+.show-blog-post-container {
+    min-height: 100vh;
+    width: 100%;
+    padding: 70px 100px;
+    display: grid;
+    grid-template-columns: (70% 30%);
+    align-items: flex-start;
+    gap: 1rem;
+
+    .blog-post {
+        min-height: 100vh;
+        .post-header-img {
+            img {
+                width: 100%;
+                // border-radius: 20px;
+            }
+        }
+    }
+
+    .blog-sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        .sidebar-blog-posts {
+            height: 300px;
+
+            a {
+                text-decoration: none;
+            }
+
+            h3 {
+                padding: 15px 10px;
+                font-family: variables.$heading-font;
+                font-weight: 700;
+                color: variables.$light-dark;
+                background-color: variables.$dark-300;
+                // border-top-left-radius: 20px;
+                // border-top-right-radius: 20px;
+                border: 2px solid variables.$dark-300;
+                border-bottom: none;
+                margin: 0;
+            }
+
+            .show-sidebar-blog-posts {
+                height: 230px;
+                border: 2px solid variables.$dark-300;
+                border-top: none;
+                // border-bottom-left-radius: 20px;
+                // border-bottom-right-radius: 20px;
+                overflow-y: scroll;
+
+                &::-webkit-scrollbar {
+                    width: 3px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: variables.$brand-color;
+                    border-radius: 20px;
+                }
+            }
+
+
+        }
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 600px) {
+    .show-blog-post-container {
+        padding: 70px 10px;
+        grid-template-columns: (100%);
+        gap: 2rem;
+    
+        .blog-post {
+            background-color: red;
+        }
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 950px) {
+    .show-blog-post-container {
+        padding: 70px 20px;
+        grid-template-columns: (100%);
+        gap: 2rem;
+    
+        .blog-post {
+            background-color: red;
+        }
+    }
+}

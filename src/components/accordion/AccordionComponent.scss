@@ -1,0 +1,14 @@
+@use '../../variables';
+
+.accordion-button {
+    background-color: variables.$brand-color  !important;
+    color: variables.$light  !important;
+
+    &:focus {
+        box-shadow: 0px 0px 5px 3px variables.$light-dark  !important;
+    }
+
+    &::after {
+        background-image: url('../../assets/plus.png') !important;
+    }
+}

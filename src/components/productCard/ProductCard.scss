@@ -1,0 +1,92 @@
+@use '../../variables';
+
+
+.productcard-container {
+    min-width: 300px;
+    max-width: 400px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: variables.$other-font;
+    margin: 0 10px;
+    border-radius: 10px;
+
+    .img-container {
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    .productcard-info {
+        h3 {
+            font-size: 1.4rem;
+            font-family: variables.$heading-font;
+            font-weight: 700;
+        }
+
+        p {
+            line-height: 2.5ch;
+            font-size: .85rem;
+        }
+    }
+
+    .productcard-action {
+        h4 {
+            margin: 0;
+            font-weight: 700;
+
+            span {
+                font-size: 1rem;
+                font-weight: 400;
+                position: relative;
+                right: 10px;
+                bottom: 3px;
+                color: rgba(0, 0, 0, 0.445);
+                text-decoration: line-through;
+            }
+        }
+
+        .offer {
+            // color: #7510f2;
+            color: variables.$brand-color;
+            margin: 0;
+            padding: 3px 0;
+        }
+
+        button {
+            margin: 0;
+            margin: 10px auto;
+            padding: 10px 15px;
+            border: 2px solid variables.$brand-color;
+            border-radius: 10px;
+            background-color: variables.$brand-color;
+            color: variables.$light;
+            transition: all 0.3s ease-in;
+
+            &:hover {
+                background-color: variables.$light;
+                color: variables.$brand-color;
+                font-weight: 800;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 600px) {
+    .productcard-container {
+        // min-width: 300px;
+        // max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    // .productcard-container {
+    //     min-width: 300px;
+    //     max-width: 400px;
+    // }
+}

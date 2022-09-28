@@ -1,0 +1,96 @@
+@use '../../variables';
+
+.navbar {
+    background-color: variables.$light;
+    font-family: variables.$heading-font;
+    padding: 5px 50px !important;
+    box-shadow: 0 2px 10px 0px variables.$dark-300;
+
+    .navbar-brand {
+        font-family: variables.$heading-font;
+        font-weight: 800;
+        color: variables.$brand-color;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            color: variables.$brand-color;
+        }
+
+        img {
+            border: 2px solid variables.$light;
+            border-radius: 10px;
+        }
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: variables.$dark  !important;
+        margin-right: .5rem;
+
+        &:hover {
+            color: variables.$brand-color  !important;
+        }
+    }
+
+    .navbar-toggler-icon {
+        background-image: url('../../assets/menu.png');
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+
+    .navbar-toggler {
+        border: none;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .btn {
+        padding: 10px 15px;
+        width: 100%;
+        border: 2px solid variables.$brand-color  !important;
+        border-radius: 10px;
+        background-color: variables.$brand-color;
+        color: variables.$light  !important;
+        font-weight: 700;
+        font-family: variables.$other-font;
+        transition: all 0.3s ease-in;
+        margin-right: 10px;
+
+        &:hover {
+            background-color: variables.$brand-color  !important;
+            color: variables.$light  !important;
+        }
+    }
+
+    .btn-plane {
+        background-color: transparent;
+        color: variables.$brand-color  !important;
+        border: none !important;
+
+        &:hover {
+            background-color: transparent !important;
+            color: variables.$brand-color  !important;
+        }
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 768px) {
+    .navbar {
+        padding: 0 10px !important;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .navbar {
+        padding: 0 20px !important;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .navbar {
+        padding: 0 20px !important;
+    }
+}

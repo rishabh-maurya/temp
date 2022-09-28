@@ -1,0 +1,657 @@
+@use '../../variables';
+
+// large laptop or desktop view
+.services-container {
+
+    // Global class for multiple uses---------------------------------------------------------
+    .center {
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        border: 2px solid variables.$brand-color  !important;
+        border-radius: 10px;
+        background-color: variables.$brand-color;
+        color: variables.$light  !important;
+        font-weight: 700;
+        font-family: variables.$other-font;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            background-color: transparent;
+            color: variables.$brand-color  !important;
+        }
+    }
+
+    // ----------------------------------------------------------------------------------------
+
+    min-height: 100vh;
+    width: 100%;
+    padding: 100px 50px 0 50px;
+
+    .services-home {
+        padding: 10px 0;
+
+        .services-home-content-container {
+            width: 50%;
+
+            h1 {
+                font-family: variables.$heading-font;
+                font-weight: 700;
+                color: variables.$dark;
+                font-size: 4rem;
+                line-height: 1.7ch;
+
+                .change-text::before {
+                    font-size: 3.5rem;
+                    padding: 10px 0;
+                    display: block;
+                    font-weight: 900;
+                    color: variables.$dark;
+                    background: linear-gradient(to right, #fb8500 0%, #7510f2);
+                    opacity: 100%;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+
+                    animation: changeText 10s linear infinite;
+                    content: 'Book Publishers';
+
+                    @keyframes changeText {
+                        from {
+                            content: 'Book Publishers';
+                        }
+
+                        50% {
+                            content: 'Toy Manufactures';
+                        }
+
+                        to {
+                            content: 'Schools';
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .services-home-img-container {
+            padding: 10px;
+
+            img {
+                width: 40vw;
+            }
+        }
+    }
+
+    .about-our-services {
+        padding: 20px 0;
+        text-align: center;
+        flex-direction: column;
+        gap: 0rem;
+
+        p {
+            max-width: 70vw;
+            font-family: variables.$other-font;
+            font-size: 1rem;
+            font-weight: 700;
+            color: variables.$dark;
+        }
+    }
+
+    .need-of-ar {
+        padding: 20px 0;
+        text-align: center;
+
+        h1 {
+            font-family: variables.$heading-font;
+            font-weight: 700;
+            color: variables.$dark;
+        }
+
+        .display-need-card {
+            gap: 2rem;
+            padding-top: 2rem;
+            flex-wrap: wrap;
+
+            .need-card {
+                padding: 30px;
+                border-radius: 20px;
+                width: 350px;
+                height: 300px;
+                background-color: variables.$dull-light;
+
+                h5 {
+                    font-family: variables.$heading-font;
+                    font-weight: 700;
+                    color: variables.$dark;
+                    padding-bottom: 10px;
+                }
+
+                p {
+                    font-family: variables.$other-font;
+                    font-weight: 700;
+                    color: variables.$dark;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+
+    .augmented-reality-made-for {
+        padding: 20px 0;
+        gap: 3rem;
+
+        .img-container {
+            img {
+                width: 500px;
+                border-radius: 5px;
+            }
+        }
+
+        .content-container {
+            width: 40vw;
+
+            h3 {
+                font-family: variables.$heading-font;
+                font-weight: 700;
+                color: variables.$dark;
+                font-size: 2.5rem;
+                padding-bottom: 5px;
+
+                span {
+                    font-weight: 900;
+                    background: linear-gradient(to right, #fb8500 0%, #7510f2);
+                    opacity: 100%;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            p {
+                font-family: variables.$other-font;
+                font-weight: 700;
+                font-size: .9rem;
+                color: variables.$light-dark;
+                padding-bottom: 5px;
+            }
+
+            .description {
+                font-size: .8rem;
+            }
+
+            .btn-container {
+                justify-content: flex-start !important;
+            }
+        }
+    }
+
+    .cart-magician {
+        padding: 20px 0;
+        text-align: center;
+
+        h1 {
+            font-family: variables.$heading-font;
+            font-weight: 700;
+            color: variables.$dark;
+            line-height: 1.6ch;
+
+            span {
+                background: linear-gradient(to right, #fb8500 0%, #7510f2);
+                opacity: 100%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 900;
+            }
+        }
+
+        .display-magician-card {
+            // padding-top: 2rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+    }
+
+    .why-choose-cart-magicain {
+        padding: 20px 0;
+        text-align: center;
+
+        h1 {
+            font-family: variables.$heading-font;
+            font-weight: 700;
+            color: variables.$dark;
+            line-height: 1.6ch;
+
+            span {
+                background: linear-gradient(to right, #fb8500 0%, #7510f2);
+                opacity: 100%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 900;
+            }
+        }
+
+        p {
+            font-family: variables.$other-font;
+            font-weight: 700;
+            color: variables.$dark;
+            font-size: .9rem;
+        }
+
+        .display-card {
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding-top: 2rem;
+        }
+    }
+
+    .see-what-cart-magicain-do-for-you {
+        padding: 100px 0;
+        text-align: center;
+        background-color: #023047;
+
+        h1 {
+            font-family: variables.$heading-font;
+            font-weight: 700;
+            color: variables.$dark;
+            color: variables.$light;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-family: variables.$other-font;
+            font-weight: 700;
+            color: variables.$dark;
+            font-size: 1rem;
+            color: variables.$light;
+            padding-bottom: 10px;
+        }
+
+        .btn-container {
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    }
+}
+
+// mobile view
+@media screen and (min-width: 250px) and (max-width: 768px) {
+    .services-container {
+        padding: 50px 10px 0 10px;
+
+        .services-home {
+            padding: 20px 0 10px 0;
+            flex-direction: column-reverse;
+            gap: 1rem;
+
+            .services-home-content-container {
+                text-align: center;
+                width: 100%;
+
+                h1 {
+                    width: 100%;
+                    font-size: 1.5rem;
+
+                    .change-text::before {
+                        font-size: 2rem;
+                        padding: 10px 0;
+                        display: block;
+                        font-weight: 900;
+                        color: variables.$dark;
+                        background: linear-gradient(to right, #fb8500 0%, #7510f2);
+                        opacity: 100%;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+
+            }
+
+            .services-home-img-container {
+                img {
+                    width: 90vw;
+                }
+            }
+        }
+
+        .about-our-services {
+            gap: 0rem;
+
+            p {
+                max-width: 90%;
+                font-size: .85rem;
+            }
+        }
+
+        .need-of-ar {
+            .display-need-card {
+                .need-card {
+                    max-width: 350px;
+                }
+            }
+        }
+
+        .augmented-reality-made-for {
+            flex-direction: column;
+            gap: 1rem;
+
+            .img-container {
+                img {
+                    width: 90vw;
+                }
+            }
+
+            .content-container {
+                width: 100%;
+                text-align: center;
+
+                h3 {
+                    font-size: 2rem;
+                }
+
+                .description {
+                    font-size: .75rem;
+                }
+            }
+
+            &:nth-child(2) {
+                flex-direction: column-reverse;
+            }
+        }
+
+        .cart-magician {
+            padding: 30px 0;
+            text-align: center;
+
+            h1 {
+                font-size: 1rem;
+
+                span {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .display-magician-card {
+                // padding-top: 2rem;
+                gap: 0rem;
+                flex-direction: column;
+            }
+        }
+
+        .why-choose-cart-magicain {
+            h1 {
+                line-height: 2ch;
+            }
+
+            p {
+                font-family: variables.$other-font;
+                font-weight: 700;
+                color: variables.$dark;
+                font-size: .9rem;
+            }
+
+            .display-card {
+                gap: 1rem;
+                flex-wrap: wrap;
+                padding-top: 2rem;
+            }
+        }
+
+        .see-what-cart-magicain-do-for-you {
+            padding: 50px 20px;
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+// tab view
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .services-container {
+        padding: 50px 20px 0 20px;
+
+        .services-home {
+            gap: 1rem;
+            flex-direction: column;
+
+            .services-home-content-container {
+                text-align: center;
+
+                h1 {
+                    width: 100%;
+                    font-size: 2.5rem;
+                    line-height: 2.3ch;
+
+                    span {
+                        font-size: 3rem;
+                    }
+                }
+
+            }
+
+            .services-home-img-container {
+                img {
+                    width: 90vw;
+                }
+            }
+        }
+
+        .about-our-services {
+            gap: 1rem;
+
+            p {
+                max-width: 90%;
+                font-size: 1rem;
+            }
+        }
+
+        .need-of-ar {
+            .display-need-card {
+                .need-card {
+                    max-width: 350px;
+                }
+            }
+        }
+
+        .augmented-reality-made-for {
+            flex-direction: column;
+
+            .img-container {
+                img {
+                    width: 90vw;
+                }
+            }
+
+            .content-container {
+                width: 100%;
+                text-align: center;
+
+                h3 {
+                    font-size: 2.5rem;
+
+                    span {
+                        font-size: 3rem;
+                    }
+                }
+
+                p {
+                    width: 80%;
+                    margin: auto;
+                    padding-bottom: 10px;
+                    font-size: 1rem;
+                }
+
+                .description {
+                    font-size: .8rem;
+                }
+
+                .btn-container {
+                    justify-content: center !important;
+                }
+            }
+        }
+
+        .cart-magician {
+            padding: 30px 0;
+            text-align: center;
+
+            h1 {
+                font-size: 2.5rem;
+
+                span {
+                    font-size: 3rem;
+                }
+            }
+
+            .display-magician-card {
+                padding-top: 2rem;
+                gap: 0rem;
+                flex-wrap: wrap;
+            }
+        }
+
+        .why-choose-cart-magicain {
+            h1 {
+                line-height: 2ch;
+            }
+
+            p {
+                font-family: variables.$other-font;
+                font-weight: 700;
+                color: variables.$dark;
+                font-size: .9rem;
+            }
+
+            .display-card {
+                gap: 1rem;
+                flex-wrap: wrap;
+                padding-top: 2rem;
+            }
+        }
+
+        .see-what-cart-magicain-do-for-you {
+            padding: 50px 20px;
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+// small laptop view
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .services-container {
+        padding: 100px 50px 0 50px;
+
+        .services-home {
+            flex-direction: column;
+
+            .services-home-content-container {
+                text-align: center;
+
+                h1 {
+                    width: 100%;
+                }
+            }
+
+            .services-home-img-container {
+                img {
+                    width: 80vw;
+                }
+            }
+        }
+
+        .about-our-services {
+            gap: 1rem;
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        .augmented-reality-made-for {
+            gap: 2rem;
+            flex-direction: column;
+
+            .img-container {
+                img {
+                    width: 80vw;
+                    border-radius: 5px;
+                }
+            }
+
+            .content-container {
+                text-align: center;
+                width: 80vw;
+
+                h3 {
+                    font-size: 3rem;
+
+                    span {
+                        font-size: 4rem;
+                    }
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+
+                .description {
+                    font-size: .9rem;
+                }
+
+                .btn-container {
+                    justify-content: center !important;
+                }
+            }
+        }
+
+        .cart-magician {
+            h1 {
+                font-size: 3rem;
+                line-height: 2ch;
+
+                span {
+                    font-size: 4rem;
+                }
+            }
+
+            .display-magician-card {
+                padding-top: 2rem;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+        }
+
+        .why-choose-cart-magicain {
+            padding: 30px 0;
+            text-align: center;
+
+            h1 {
+                font-size: 3rem;
+
+                span {
+                    font-size: 4rem;
+                }
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

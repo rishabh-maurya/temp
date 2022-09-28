@@ -1,0 +1,163 @@
+@use '../../variables';
+
+.contact-container {
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .contact-img-form-container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .contact-form {
+            font-family: variables.$other-font;
+            font-weight: 700;
+            text-align: center;
+
+            h1 {
+                font-family: variables.$heading-font;
+                font-weight: 700;
+                color: variables.$brand-color;
+                margin: 0 0 0 -3px;
+            }
+
+            p {
+                color: variables.$light-dark;
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            form {
+                width: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                textarea,
+                input {
+                    padding: 12px 10px;
+                    width: 100%;
+                    outline: none;
+                    border: 2px solid variables.$dark-300;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: variables.$dark;
+
+                    &::placeholder {
+                        color: variables.$dark-300;
+                    }
+
+                    &:focus {
+                        border-color: variables.$dark;
+                    }
+                }
+
+                textarea {
+                    height: 120px;
+                    resize: none;
+                }
+
+                button {
+                    padding: 10px 25px;
+                    border: 2px solid variables.$brand-color;
+                    border-radius: 10px;
+                    background-color: variables.$brand-color;
+                    color: variables.$light;
+                    font-weight: 700;
+                    font-family: variables.$other-font;
+                    transition: all 0.3s ease-in;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: variables.$brand-color  !important;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        .map-conact-info {
+
+
+            .contact-info {
+                .contact-info-card {
+                    margin-bottom: 10px;
+                    svg {
+                        height: 30px;
+                        width: 30px;
+                    }
+
+                    p {
+                        font-family: variables.$other-font;
+                        display: inline;
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 250px) and (max-width: 600px) {
+    .contact-container {
+        padding: 50px 10px;
+
+        .contact-img-form-container {
+            justify-content: center;
+
+            .contact-form {
+                h1 {
+                    font-family: variables.$heading-font;
+                    font-weight: 700;
+                    color: variables.$brand-color;
+                    margin: 0 0 0 -3px;
+                }
+
+                p {
+                    font-size: .8rem;
+                }
+
+                form {
+                    width: 90vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 950px) {
+    .contact-container {
+        padding: 50px 20px;
+
+        .contact-img-form-container {
+            justify-content: center;
+
+            .contact-form {
+                h1 {
+                    font-family: variables.$heading-font;
+                    font-weight: 700;
+                    color: variables.$brand-color;
+                    margin: 0 0 0 -3px;
+                }
+
+                p {
+                    font-size: .8rem;
+                }
+
+                form {
+                    max-width: 500px;
+                }
+            }
+        }
+    }
+}

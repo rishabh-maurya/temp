@@ -1,0 +1,73 @@
+@use '../../variables';
+
+.trending-blog-post-card-container {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.2s ease-in;
+    min-width: 300px;
+    max-width: 500px;
+
+    &:hover {
+        background-color: beige;
+        cursor: pointer;
+    }
+
+    .img-container {
+        width: 200px;
+        height: 80px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            // border-radius: 20px;
+        }
+    }
+
+    .card-info {
+        width: 100%;
+        h5 {
+            font-family: variables.$heading-font;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: variables.$light-dark;
+            margin: 0 0 2px 0;
+            width: 100%;
+        }
+
+        p {
+            font-family: variables.$other-font;
+            font-weight: 700;
+            color: variables.$dark-300;
+            line-height: 2.2ch;
+            font-size: .7rem;
+            margin: 0;
+
+            span {
+                color: variables.$brand-color;
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 600px) {
+    .trending-blog-post-card-container {
+    
+        .card-info {
+            h5 {
+                font-size: .9rem;
+            }
+    
+            p {
+                font-size: .6rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 950px) {
+    
+}

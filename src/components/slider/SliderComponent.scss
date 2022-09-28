@@ -1,0 +1,40 @@
+@use '../../variables';
+
+.slider-container {
+    padding: 50px 50px 20px;
+    overflow: hidden;
+
+    .slider-img-container {
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 600px) {
+    .slider-container {
+        padding: 50px 20px 20px;
+
+        .slider-img-container {
+            img {
+                // height: 50vw;
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 950px) {
+    .slider-container {
+        padding: 50px;
+
+        .slider-img-container {
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+    }
+}

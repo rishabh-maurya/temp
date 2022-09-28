@@ -1,0 +1,276 @@
+@use '../../variables';
+
+.footer {
+    padding: 50px 100px;
+    background-color: variables.$brand-color;
+
+    a {
+        font-family: variables.$other-font;
+        font-weight: 700;
+        color: variables.$dull-light;
+        text-decoration: none;
+        font-size: .9rem;
+        margin-right: 8px;
+
+        &:hover {
+            color: variables.$light;
+        }
+    }
+
+    .help-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            h1 {
+                font-family: variables.$heading-font;
+                font-weight: 700;
+                color: variables.$light;
+                max-width: 60vw;
+            }
+
+            .btn {
+                padding: 10px 15px;
+                border: 2px solid variables.$light;
+                border-radius: 10px;
+                background-color: transparent;
+                color: variables.$light;
+                font-family: variables.$other-font;
+                font-weight: 700;
+                transition: all 0.3s ease-in;
+
+                &:hover {
+                    background-color: variables.$light;
+                    color: variables.$brand-color;
+                    font-weight: 800;
+                }
+            }
+        }
+
+        .supports-container {
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+
+            span {
+                font-size: 1rem;
+                font-family: variables.$other-font;
+                color: variables.$dull-light;
+            }
+
+            .supports-icon {
+                padding: 5px;
+                background-color: variables.$dull-light;
+                height: 40px;
+                width: 40px;
+                color: variables.$brand-color  !important;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    hr {
+        border-top: 2px solid #fff;
+        padding: 10px 0;
+    }
+
+    .footer-info {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        .part1 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h2 {
+                font-family: variables.$heading-font;
+                color: variables.$light;
+                font-weight: 700;
+            }
+
+            p {
+                max-width: 400px;
+                font-family: variables.$other-font;
+                color: variables.$dull-light;
+                font-size: .85rem;
+            }
+
+            .subscribe {
+                form {
+                    width: 330px;
+                    padding: 20px;
+                    background-color: variables.$dull-light;
+                    border-radius: 50px;
+                    border-top-left-radius: 0px;
+                    box-shadow: 0 0 10px 5px variables.$lightest-dark;
+                    font-family: variables.$other-font;
+                    font-weight: 700;
+
+                    p {
+                        color: variables.$dark;
+                    }
+
+                    input {
+                        padding: 10px 5px;
+                        width: 100%;
+                        outline: none;
+                        border: 2px solid variables.$brand-color;
+                        border-radius: 10px;
+                        font-size: 1rem;
+                        background-color: transparent;
+                        color: variables.$brand-color;
+                    }
+
+                    button {
+                        margin: 10px auto;
+                        padding: 10px 15px;
+                        width: 100%;
+                        border: 2px solid variables.$brand-color;
+                        border-radius: 10px;
+                        background-color: variables.$brand-color;
+                        color: variables.$light;
+                        transition: all 0.3s ease-in;
+
+                        &:hover {
+                            background-color: transparent;
+                            color: variables.$brand-color;
+                            font-weight: 800;
+                        }
+                    }
+                }
+            }
+        }
+
+        .part2 {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 2.5rem;
+
+            .menus {
+
+                h5 {
+                    font-family: variables.$heading-font;
+                    font-weight: 600;
+                    color: variables.$light;
+                }
+
+                a {
+                    display: block;
+                    font-size: .8rem;
+                    margin: 3px 0;
+                    padding: 3px 0;
+                }
+            }
+        }
+
+        .part3 {
+            h5 {
+                font-family: variables.$heading-font;
+                font-weight: 600;
+                color: variables.$light;
+            }
+
+            .social-icons {
+                a {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    .bottom-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 600px) {
+    .footer {
+        padding: 50px 10px;
+        text-align: center;
+
+        .help-info {
+            gap: 1rem;
+
+            div {
+                gap: .5rem;
+                flex-direction: column;
+
+                h1 {
+                    font-size: 1.3rem;
+                    min-width: 80vw;
+                }
+            }
+
+            .supports-container {
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+
+        .footer-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+
+            .part1 {
+                align-items: center;
+            }
+
+            .part2 {
+                text-align: left;
+            }
+        }
+
+        .bottom-container {
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 950px) {
+    .footer {
+        padding: 50px 20px;
+
+        .help-info {
+            div {
+                h1 {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .supports-container {
+                padding: 20px 0;
+            }
+        }
+
+        .footer-info {
+            .part1 {
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}

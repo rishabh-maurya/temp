@@ -1,0 +1,909 @@
+@use '../../variables';
+
+.home {
+    padding: 20px 0;
+
+    .ecommerce-platforms {
+        padding: 40px 50px; 
+        background-color: #edf2f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        h3 {
+            font-family: variables.$other-font;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .show-ecommerce-platforms {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            .img-container {
+                padding: 10px;
+                height: 85px;
+                width: 180px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .how-it-works {
+        padding: 40px 50px;
+        font-family: variables.$other-font;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: variables.$light;
+
+        h1 {
+            font-family: variables.$heading-font;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        p {
+            color: variables.$light-dark;
+            width: max-content;
+        }
+
+        .show-cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding-top: 1rem;
+
+            .how-it-works-card {
+                width: 350px;
+
+                img {
+                    height: 230px;
+                    width: 100%;
+                    border-radius: 20px;
+                    padding-bottom: 10px;
+                }
+
+                h5 {
+                    font-family: variables.$heading-font;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-size: .85rem;
+                    line-height: 2.2ch;
+                    color: variables.$light-dark;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .why-holokitab {
+        // min-height: 70vh;
+        width: 100%;
+        padding: 40px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+
+        .left-part {
+            img {
+                height: 600px;
+                width: 600px;
+                filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.573));
+            }
+        }
+
+        .right-part {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+
+            h1 {
+                color: variables.$dark;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 700;
+            }
+
+            p {
+                width: 600px;
+                font-family: 'Comfortaa', cursive;
+                font-weight: 700;
+                color: variables.$light-dark;
+            }
+
+            .show-proof {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+
+                .proof-card {
+                    .img-container {
+                        width: 75px;
+                        padding: 15px;
+                        margin-bottom: 10px;
+                        border-radius: 33px;
+                        background-color: variables.$brand-color;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+
+                    h5 {
+                        color: variables.$light-dark;
+                        max-width: 150px;
+                        font-weight: 700;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .multi-award-winning {
+        padding: 40px 50px;
+
+        h3 {
+            font-family: variables.$other-font;
+            font-weight: 700;
+            font-size: 2.2rem;
+            text-align: center;
+            padding-bottom: 10px;
+            color: variables.$soft-orange;
+        }
+
+        .show-awards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            .awards-img-container {
+                img {
+                    width: 100px;
+                }
+            }
+        }
+    }
+
+    .free-holokitab-app {
+        padding: 40px 50px;
+        // background-color: variables.$secondary-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        .info-container {
+            h1 {
+                font-family: variables.$heading-font;
+                font-weight: 700;
+                font-size: 3rem;
+            }
+
+            p {
+                font-family: variables.$other-font;
+                color: variables.$light-dark;
+                font-size: .8rem;
+                font-weight: 700;
+                max-width: 600px;
+            }
+
+            .show-app-platforms {
+                img {
+                    height: 60px;
+                    width: 200px;
+                    margin-right: 10px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    .video-gallery {
+        min-height: max-content;
+        width: 100%;
+        padding: 40px 50px;
+        // background-color: variables.$secondary-color;
+
+        h1 {
+            text-align: center;
+            font-family: variables.$heading-font;
+            font-weight: 700;
+            padding-bottom: 30px;
+        }
+
+        .video-gallery-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+
+            iframe {
+                border-radius: 20px;
+                height: 300px;
+                width: 550px;
+            }
+
+        }
+    }
+
+    .parent-ratings-container {
+        padding: 40px 50px;
+        // background-color: #fad2e1;
+
+        .star-rating {
+            margin-bottom: 1rem;
+
+            span {
+                margin-right: 5px;
+                color: #ffd166;
+
+                svg {
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+        }
+
+        h1 {
+            font-family: variables.$other-font;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+
+            svg {
+                color: variables.$brand-color;
+            }
+        }
+
+        .rating-card {
+            min-width: 300px;
+            max-width: 350px;
+            padding: 20px;
+            border: 3px solid variables.$light;
+            border-radius: 20px;
+            background-color: #06d6a0;
+            margin: 0 10px;
+
+            p {
+                font-family: variables.$other-font;
+                font-weight: 700;
+                font-size: .8rem;
+                line-height: 2.3ch;
+                color: variables.$dull-light;
+            }
+
+
+            .rating-message {
+                h5 {
+                    font-family: variables.$heading-font;
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                    color: variables.$light;
+                }
+            }
+
+            .name {
+                font-family: variables.$heading-font;
+                font-weight: 700;
+                font-size: 1.2rem;
+                color: #073b4c;
+                text-align: right;
+
+                svg {
+                    height: 25px;
+                    width: 25px;
+                    position: relative;
+                    top: -2px;
+                }
+            }
+        }
+    }
+
+    .frequently-asked-questions {
+        min-height: 80vh;
+        padding: 40px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem !important;
+
+        .heading-container {
+            width: 30vw;
+            font-family: variables.$other-font;
+            font-weight: 700;
+
+            h1 {
+                font-family: variables.$heading-font;
+                font-weight: 700;
+                line-height: 2.2ch;
+
+                span {
+                    display: block;
+                    font-size: 4.2rem;
+                    color: variables.$brand-color;
+                }
+            }
+
+            p {
+                padding-top: 15px;
+                font-size: .9rem;
+                color: variables.$light-dark;
+                line-height: 2.3ch;
+                width: 400px;
+            }
+
+            .img-btn-cotainer {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 2rem;
+
+                img {
+                    height: 100px;
+                    width: 100px;
+                    transform: rotate(335deg);
+                }
+
+                button {
+                    border: 2px solid variables.$brand-color;
+                    padding: 10px 15px;
+                    background-color: transparent;
+                    border-radius: 10px;
+                    color: variables.$brand-color;
+                    font-weight: 700;
+                    align-self: center;
+                    transition: all 0.3s ease-in;
+
+                    &:hover {
+                        background-color: variables.$brand-color;
+                        color: variables.$light;
+                    }
+                }
+            }
+        }
+
+        .bootstrap-accordion {
+            width: 45vw;
+        }
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 768px) {
+    .home {
+        .ecommerce-platforms {
+            padding: 20px 10px;
+            flex-direction: column;
+
+            h3 {
+                font-family: variables.$other-font;
+                font-size: 1.5rem;
+            }
+
+            .show-ecommerce-platforms {
+                flex-wrap: wrap;
+            }
+        }
+
+        .how-it-works {
+            padding: 20px 10px;
+
+            .show-cards {
+                .how-it-works-card {
+                    width: 300px;
+
+                    img {
+                        height: 230px;
+                        width: 100%;
+                        border-radius: 20px;
+                        padding-bottom: 10px;
+                    }
+
+                    h5 {
+                        font-family: variables.$heading-font;
+                        font-weight: 700;
+                    }
+
+                    p {
+                        font-size: .85rem;
+                        line-height: 2.2ch;
+                        color: variables.$light-dark;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .why-holokitab {
+            gap: 1rem;
+            padding: 20px 10px;
+
+            .left-part {
+                img {
+                    height: 90vw;
+                    width: 90vw;
+                    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.573));
+                }
+            }
+
+            .right-part {
+                text-align: center;
+                justify-content: center;
+
+                h1 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    width: 80vw;
+                    font-size: .8rem;
+                }
+
+                .show-proof {
+                    grid-template-columns: repeat(2, 40%);
+                    justify-content: center;
+                    align-items: center;
+
+                    .proof-card {
+                        text-align: left;
+
+                        .img-container {
+                            width: 65px;
+                            padding: 15px;
+                            margin-bottom: 10px;
+                            border-radius: 25px;
+                            background-color: variables.$brand-color;
+
+                            img {
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+
+                        h5 {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .multi-award-winning {
+            padding: 20px 10px;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .show-awards {
+                .awards-img-container {
+                    img {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+
+        .free-holokitab-app {
+            text-align: center;
+            padding: 20px 10px;
+
+            .info-container {
+                h1 {
+                    font-size: 1.5rem;
+                    padding-bottom: 5px;
+                }
+
+                p {
+                    max-width: 80vw;
+                    font-size: .8rem;
+                }
+
+                .show-app-platforms {
+                    img {
+                        height: 40px;
+                        width: 120px;
+                    }
+                }
+            }
+
+            .app-img-container {
+                img {
+                    width: 95vw;
+                }
+            }
+        }
+
+        .video-gallery {
+            min-height: max-content;
+            padding: 20px 10px;
+            margin-top: -1px;
+
+            h1 {
+                font-size: 2rem;
+                padding-bottom: 20px;
+            }
+
+            .video-gallery-container {
+                iframe {
+                    height: 50vw;
+                    width: 90vw;
+                }
+
+            }
+        }
+
+        .parent-ratings-container {
+            padding: 20px 0px;
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .rating-card {
+                margin: 0 auto;
+            }
+        }
+
+        .frequently-asked-questions {
+            padding: 20px 10px;
+            flex-direction: column;
+
+            .heading-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                text-align: center;
+
+                h1 {
+                    font-size: 1.8rem;
+
+                    span {
+                        font-size: 3.1rem;
+                        color: variables.$brand-color;
+                    }
+                }
+
+                p {
+                    font-size: .9rem;
+                    width: 90%;
+
+                }
+
+                .img-btn-cotainer {
+                    gap: 1rem;
+
+                    img {
+                        height: 100px;
+                        width: 100px;
+                    }
+                }
+            }
+
+            .bootstrap-accordion {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .home {
+        .ecommerce-platforms {
+            padding: 30px;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            h3 {
+                font-size: 2rem;
+                font-weight: 700;
+                font-family: variables.$other-font;
+            }
+        }
+
+        .how-it-works {
+            padding: 30px 20px;
+
+            .show-cards {
+                gap: 1rem;
+            }
+        }
+
+        .why-holokitab {
+            gap: 1rem;
+            padding: 30px 20px;
+
+            .right-part {
+                text-align: center;
+                justify-content: center;
+
+                h1 {
+                    font-size: 3rem;
+                }
+
+                p {
+                    width: 80vw;
+                }
+
+                .show-proof {
+                    grid-template-columns: repeat(3, 30%);
+                    justify-content: center;
+                    align-items: center;
+
+                    .proof-card {
+                        text-align: left;
+
+                        h5 {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .multi-award-winning {
+            padding: 30px 20px;
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            .show-awards {
+                .awards-img-container {
+                    img {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+
+        .free-holokitab-app {
+            text-align: center;
+            padding: 30px 20px;
+
+            .info-container {
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    max-width: 80vw;
+                    font-size: .85rem;
+                }
+            }
+        }
+
+        .video-gallery {
+            min-height: max-content;
+            padding: 30px 20px;
+            margin-top: -1px;
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .video-gallery-container {
+                iframe {
+                    height: 40vw;
+                    width: 80vw;
+                }
+
+            }
+        }
+
+        .parent-ratings-container {
+            padding: 30px 50px;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .rating-card {
+                // width: 40vw;
+            }
+        }
+
+        .frequently-asked-questions {
+            padding: 30px 20px;
+            flex-direction: column;
+
+            .heading-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                text-align: center;
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                    width: 60%;
+
+                }
+            }
+
+            .bootstrap-accordion {
+                width: 80vw;
+            }
+        }
+    }
+}
+
+
+// small laptop view
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .home {
+        .ecommerce-platforms {
+            padding: 20px;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            h3 {
+                font-size: 2rem;
+                font-weight: 700;
+                font-family: variables.$other-font;
+            }
+        }
+
+        .how-it-works {
+            padding: 20px 20px;
+
+            .show-cards {
+                gap: 1rem;
+            }
+        }
+
+        .why-holokitab {
+            gap: 1rem;
+            padding: 20px;
+
+            .right-part {
+                text-align: center;
+                justify-content: center;
+
+                h1 {
+                    font-size: 3rem;
+                }
+
+                p {
+                    width: 80vw;
+                }
+
+                .show-proof {
+                    grid-template-columns: repeat(3, 30%);
+                    justify-content: center;
+                    align-items: center;
+
+                    .proof-card {
+                        text-align: left;
+
+                        h5 {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .multi-award-winning {
+            padding: 20px;
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            .show-awards {
+                .awards-img-container {
+                    img {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+
+        .free-holokitab-app {
+            text-align: center;
+            padding: 20px;
+
+            .info-container {
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    max-width: 80vw;
+                    font-size: .85rem;
+                }
+            }
+        }
+
+        .video-gallery {
+            min-height: max-content;
+            padding: 20px;
+            margin-top: -1px;
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .video-gallery-container {
+                iframe {
+                    height: 40vw;
+                    width: 80vw;
+                }
+
+            }
+        }
+
+        .parent-ratings-container {
+            padding: 20px 50px;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .rating-card {
+                width: 40vw;
+            }
+        }
+
+        .frequently-asked-questions {
+            padding: 20px;
+            flex-direction: column;
+
+            .heading-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                text-align: center;
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                    width: 60%;
+
+                }
+            }
+
+            .bootstrap-accordion {
+                width: 80vw;
+            }
+        }
+    }
+}
